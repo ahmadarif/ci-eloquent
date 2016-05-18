@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model as Model;
 class User extends Model
 {
     protected $table = 'users';
-    public $timestamps = false;
+    
+    public $timestamps = FALSE;
 }
 
 /* End of file User.php */
