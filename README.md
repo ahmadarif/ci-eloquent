@@ -42,5 +42,5 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 ```
-- Selesai! Lihat contoh implementasi di models/User.php dan controllers/UserController.php
+- Selesai! Lihat contoh implementasi di `models/User.php` dan `controllers/UserController.php`
 - Belajar lebih lanjut tentang Eloquent main aja ke [sini](https://laravel.com/docs/5.2/eloquent)
