@@ -22,14 +22,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ci-eloquent.users: ~2 rows (approximately)
+-- Dumping data for table ci-eloquent.users: ~3 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT IGNORE INTO `users` (`id`, `first_name`, `last_name`, `email`) VALUES
 	(1, 'Ahmad', 'Arif', 'ahmad_arif@icloud.com'),
-	(2, 'Hanny', 'Tia Lestari', 'tia.lestari@gmail.com');
+	(2, 'Hanny', 'Tia Lestari', 'tia.lestari@gmail.com'),
+	(4, 'Ahmad', 'Arif', 'ahmad.arif019@gmail.com'),
+	(15, 'A', 'A', 'A@mail.com'),
+	(16, 'B', 'B', 'B@mail.com'),
+	(17, 'C', 'C', 'C@mail.com'),
+	(18, 'D', 'D', 'D@mail.com'),
+	(19, 'E', 'E', 'E@mail.com');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
