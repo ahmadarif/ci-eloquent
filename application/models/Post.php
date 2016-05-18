@@ -3,16 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
-
-    protected $table = 'users';
+class Post extends Model {
+	
+    protected $table = 'posts';
     public $timestamps = FALSE;
 
     /*
-     * relasi one to many
+     * invers dari relasi User->posts()
      */
-    public function posts() {
-        return $this->hasMany('Post');
+    public function user() {
+        return $this->belongsTo('User');
     }
 }
 

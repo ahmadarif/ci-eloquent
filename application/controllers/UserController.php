@@ -6,6 +6,7 @@ class UserController extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('User');
+        $this->load->model('Post');
     }
     
     public function index() {
@@ -80,6 +81,16 @@ class UserController extends CI_Controller {
     	$user = User::find(1);
     	$user->email = "ahmad_arif@icloud.com";
     	$user->save();
+    }
+
+    public function relations()
+    {
+        $user = User::find(1);
+        echo "Name : " . $user->first_name;
+        echo "<br>Post Count : " . $user->posts()->count();
+        foreach ($user->posts()->get() as $post) {
+            echo "<br>" . $post->id . ". " . $post->news;
+        }
     }
 }
 
