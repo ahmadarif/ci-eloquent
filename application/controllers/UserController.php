@@ -85,11 +85,16 @@ class UserController extends CI_Controller {
 
     public function relations()
     {
-        $user = User::find(1);
+        $user = User::find(2);
         echo "Name : " . $user->first_name;
-        echo "<br>Post Count : " . $user->posts()->count();
-        foreach ($user->posts()->get() as $post) {
+        echo "<br>Post Count : " . $user->posts->count();
+        
+        foreach ($user->posts as $post) {
             echo "<br>" . $post->id . ". " . $post->news;
+
+            // update post
+            $post->news .= " update";
+            $post->save();
         }
     }
 }
